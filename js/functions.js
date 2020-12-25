@@ -18,3 +18,10 @@ function createMatrixArray(m, n, defaultNumber=null) {
     return matrix;
 }
 
+function isZeroRow( row ) {
+	for(let i=0; i < row.length; i++ )
+		if(row[i]!=0)
+			return false;	
+	return true;
+}
+
