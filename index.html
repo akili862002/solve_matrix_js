@@ -2,8 +2,9 @@
 <html>
 <head>
 	<title>Solve Matrix</title>
-	<script type="text/javascript" src="main.js"></script>
-	<link rel="stylesheet" href="./index.css">
+	<script type="text/javascript" src="./js/main.js"></script>
+	<script type="text/javascript" src="./js/functions.js"></script>
+	<link rel="stylesheet" href="./css/index.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -28,14 +29,22 @@
 				</div>
 			</div>
 
-			<button class="create-matrix-btn">
+			<button class="create-matrix-btn primary-btn"
+				onclick="createFormMatrix()"
+			>
 				Create Your Matrix
 			</button>
 		</div>
 
-		<div class="input-matrix">
-		</div>
+		<form class="input-matrix">
+		</form>
 
+		<button class="next-btn primary-btn"
+			onclick="createMatrix()"
+		>
+			<h4>Next</h4>
+			<img src="./images/right-arrow.svg" class="icon">
+		</button>
 	</div>
 
 </body>

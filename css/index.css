@@ -16,10 +16,10 @@
 
 html, body {
   width: 100%;
-  height: 100%;
 }
 
 body {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -38,7 +38,31 @@ input {
   background: none;
 }
 
+.icon {
+  width: 22px;
+  height: auto;
+}
+
+.primary-btn {
+  padding: 10px 20px;
+  background: var(--main-color);
+  border: none;
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  border-radius: 7px;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.primary-btn:hover {
+  -webkit-box-shadow: 0 0 15px #6773e098;
+          box-shadow: 0 0 15px #6773e098;
+}
+
 .main {
+  position: relative;
   width: 100%;
   height: 100%;
   max-width: 1350px;
@@ -55,11 +79,14 @@ input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-bottom: 100px;
+  margin-bottom: 100px;
 }
 
 .main .intro {
   width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   margin-top: 120px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -159,6 +186,7 @@ input {
   border-bottom: 1px solid #b6b6b6;
   width: 80px;
   margin: 10px 10px;
+  text-align: center;
 }
 
 .main .form-input-size .form .inputs .input-form input::-webkit-outer-spin-button, .main .form-input-size .form .inputs .input-form input::-webkit-inner-spin-button {
@@ -169,28 +197,72 @@ input {
   border-bottom: 1px solid var(--main-color);
 }
 
-.main .form-input-size .create-matrix-btn {
-  padding: 10px 20px;
-  background: var(--main-color);
-  border: none;
-  color: white;
-  font-size: 17px;
-  font-weight: 600;
-  border-radius: 7px;
+.main .form-input-size button.create-matrix-btn {
   margin-top: 50px;
-  cursor: pointer;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
 }
 
-.main .form-input-size .create-matrix-btn:hover {
-  -webkit-box-shadow: 0 0 15px #6773e098;
-          box-shadow: 0 0 15px #6773e098;
+.main .input-matrix {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 50px 0;
+}
+
+.main .input-matrix ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.main .input-matrix ul .block {
+  padding: 5px;
+  border: 1px solid #b8b8b8;
+}
+
+.main .input-matrix ul .block input {
+  width: 40px;
+  text-align: center;
+  outline: none;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+}
+
+.main .input-matrix ul .block:focus-within {
+  background: #707ceb2a;
+}
+
+.main .next-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .next-btn .icon {
+  margin-left: 10px;
 }
 
 @media screen and (max-width: 930px) {
   .main {
-    padding: 50px 10px;
+    padding: 0 10px;
     padding-bottom: 100px;
   }
   .main .intro {
