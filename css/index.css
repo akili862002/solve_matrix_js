@@ -38,6 +38,11 @@ input {
   background: none;
 }
 
+.icon {
+  width: 22px;
+  height: auto;
+}
+
 .primary-btn {
   padding: 10px 20px;
   background: var(--main-color);
@@ -235,12 +240,29 @@ input {
 }
 
 .main .input-matrix ul .block:focus-within {
-  background: rgba(107, 170, 107, 0.171);
+  background: #707ceb2a;
+}
+
+.main .next-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .next-btn .icon {
+  margin-left: 10px;
 }
 
 @media screen and (max-width: 930px) {
   .main {
-    padding: 50px 10px;
+    padding: 0 10px;
     padding-bottom: 100px;
   }
   .main .intro {
